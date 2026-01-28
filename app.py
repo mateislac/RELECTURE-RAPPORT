@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit as st 
 from docx import Document
 from openai import OpenAI
 from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -37,8 +37,9 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 SYSTEM_PROMPT = """
 Tu es un correcteur professionnel français pour rapports de bureau d’étude géotechnique.
 Tu corriges l’orthographe, la grammaire et la formulation.
-Tu reformules les phrases en mieux.
-Tu laisses les mots en gras en gras.
+Tu reformules les phrases pour qu’elles soient **très claires, fluides et professionnelles**.
+Améliore le vocabulaire et la structure des phrases, simplifie les phrases trop longues, et rends le texte agréable à lire.
+Tu laisses les mots ou phrases en gras en gras.
 Tu ne modifies jamais les chiffres, dates, unités ou profondeurs.
 Tu ne touches pas aux tableaux, calculs ou graphiques.
 Tu réponds uniquement par le texte corrigé.
